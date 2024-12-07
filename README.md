@@ -31,3 +31,31 @@ git commit -a -m "<message>"
 
 ### Moving files
 git mv file_from file_to
+
+
+# Viewing the Commit History
+
+## Lists the commits made
+git log
+
+### Patch option shows the difference
+git log --patch
+
+git log --pretty=format:"%h - %an, %ar : %s"
+
+Useful specifiers: https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History#pretty_format
+
+## Limiting Log Output
+
+### Only show commits with a commit message containing the string.
+git log --grep "<string>"
+
+### Only show commits adding or removing code matching the string.
+git log -S "<string>"
+
+Options to limit the output: https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History#limit_options
+
+
+
+
+
