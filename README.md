@@ -55,6 +55,18 @@ git log -S "<string>"
 
 Options to limit the output: https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History#limit_options
 
+# Undoing Things
+
+## Undo something
+git commit -m "Initial commit"
+git add forgotten_file
+git commit --amend
+
+Note: Only amend commits that are still local and have not been pushed somewhere.
+
+## Undoing things
+git restore
+git restore --staged
 
 
 
