@@ -68,6 +68,30 @@ Note: Only amend commits that are still local and have not been pushed somewhere
 git restore
 git restore --staged
 
+# Working with Remotes
 
+## Showing Your Remotes
+git remote -v
 
+## Adding Remote Repositories
+git remote add pb <url>
+git fetch pb
 
+## Fetching And Pulling from Your Remotes
+git fetch <remote>
+
+## Pushing to Your Remotes
+git push orign main
+
+## Inspecting a Remote
+git remote show origin
+
+## Renaming and Removing Remotes
+git remote rename pb paul
+git remote renome paul
+
+# Tagging
+
+## Listing  Your Tags
+git tag
+git tag -l "v1.8.5.*
