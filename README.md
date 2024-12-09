@@ -1,21 +1,23 @@
-# Getting a Git Repository
+# Getting Started
 
-## Initializing a Repository in an Existing Directory
+## Getting a Git Repository
+
+### Initializing a Repository in an Existing Directory
 ```git init```
 
-## Cloning an existing repository
+### Cloning an existing repository
 ```git clone <url>```
 
-# Recording Changes to the Repository
+## Recording Changes to the Repository
 
-## Checking the Status of Your Files
+### Checking the Status of Your Files
 ```git status```
 
-## Tracking New Files
+### Tracking New Files
 ```echo 'My Project' >> README```
 ```git add README```
 
-## Viewing Your Staged and Unstaged Changes
+### Viewing Your Staged and Unstaged Changes
 
 ### To see what you've changed but not yet staged
 ```git diff```
@@ -33,88 +35,99 @@
 ```git mv file_from file_to```
 
 
-# Viewing the Commit History
+## Viewing the Commit History
 
-## Lists the commits made
+### Lists the commits made
 ```git log```
 
-### Patch option shows the difference
+#### Patch option shows the difference
 ```git log --patch```
 
 ```git log --pretty=format:"%h - %an, %ar : %s"```
 
 Useful specifiers: https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History#pretty_format
 
-## Limiting Log Output
+### Limiting Log Output
 
-### Only show commits with a commit message containing the string.
+#### Only show commits with a commit message containing the string.
 ```git log --grep "<string>"```
 
-### Only show commits adding or removing code matching the string.
+#### Only show commits adding or removing code matching the string.
 ```git log -S "<string>"```
 
 Options to limit the output: https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History#limit_options
 
-# Undoing Things
+## Undoing Things
 
-## Undo something
+### Undo something
 ```git commit -m "Initial commit"```
 ```git add forgotten_file```
 ```git commit --amend```
 
 Note: Only amend commits that are still local and have not been pushed somewhere.
 
-## Undoing things
+### Undoing things
 ```git restore```
 ```git restore --staged```
 
-# Working with Remotes
+## Working with Remotes
 
-## Showing Your Remotes
+### Showing Your Remotes
 ```git remote -v```
 
-## Adding Remote Repositories
+### Adding Remote Repositories
 ```git remote add pb <url>```
 ```git fetch pb```
 
-## Fetching And Pulling from Your Remotes
+### Fetching And Pulling from Your Remotes
 ```git fetch <remote>```
 
-## Pushing to Your Remotes
+### Pushing to Your Remotes
 ```git push orign main```
 
-## Inspecting a Remote
+### Inspecting a Remote
 ```git remote show origin```
 
-## Renaming and Removing Remotes
+### Renaming and Removing Remotes
 ```git remote rename pb paul```
 ```git remote renome paul```
 
-# Tagging
+## Tagging
 
-## Listing  Your Tags
+### Listing  Your Tags
 ```git tag```
 ```git tag -l "v1.8.5.*```
 
-## Creating Tags
+### Creating Tags
 Git supports two types of tags: lightweght and annotated
 
-### Lightweight
+#### Lightweight
 A lightweight that is just a pointer to a specific commit.
 
-### Annotated Tags
+#### Annotated Tags
 A annotated tag is stored as full object in the Git database.
 ```git tag -a v1.4 -m "my version 1.4"```
 
 To see the tag data along with the commit
 ```git show v1.4```
 
-## Sharing Tags
+### Sharing Tags
 ```git push origin v1.5```
 ``` git push origin --tags```
 
-## Deleting Tags
+### Deleting Tags
 ```git tag -d <tagname>```
 
-## Checking out Tags
+### Checking out Tags
 ```git checkout v2.0.0```
+
+# Git Branching
+
+## Creating a New Branch
+```git branch testing```
+
+Note: To know what branch you're currently on, there is a special pointer called HEAD.
+```git log --oneline --decorate```
+
+## Switching Branches
+```git checkout testing```
