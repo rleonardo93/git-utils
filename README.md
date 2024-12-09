@@ -64,7 +64,7 @@ Options to limit the output: https://git-scm.com/book/en/v2/Git-Basics-Viewing-t
 ```git add forgotten_file```
 ```git commit --amend```
 
-Note: Only amend commits that are still local and have not been pushed somewhere.
+**Note:** Only amend commits that are still local and have not been pushed somewhere.
 
 ### Undoing things
 ```git restore```
@@ -126,7 +126,7 @@ To see the tag data along with the commit
 ## Creating a New Branch
 ```git branch testing```
 
-Note: To know what branch you're currently on, there is a special pointer called HEAD.
+**Note:** To know what branch you're currently on, there is a special pointer called HEAD.
 ```git log --oneline --decorate```
 
 ## Switching Branches
