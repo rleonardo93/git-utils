@@ -131,3 +131,16 @@ Note: To know what branch you're currently on, there is a special pointer called
 
 ## Switching Branches
 ```git checkout testing```
+
+## Branching Management
+
+### Get list of branches
+```git branch```
+```git branch --all```
+
+See the last commit on each branch
+```git commit -v```
+
+See the branches that you have or have not yet merged into the branch you're currently on
+```git branch --merged```
+```git branch --no-merged```
